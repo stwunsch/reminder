@@ -163,7 +163,6 @@ if __name__ == "__main__":
 
     if args.delete:
         delete_last_message(args.verbose)
-        os._exit(0)
 
     if args.message:
         add_message(args.message, args.verbose)
