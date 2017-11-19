@@ -69,7 +69,7 @@ def parse_arguments():
         "--delete",
         action="store_true",
         default=False,
-        help="Delete last reminder message")
+        help="Delete last reminder message.")
 
     return parser.parse_args()
 
