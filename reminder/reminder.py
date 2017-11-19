@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import argparse
 import yaml
 import os
@@ -151,21 +149,3 @@ def load_config_and_database(verbose):
     database = yaml.load(open(path_database))
     if verbose:
         print("Loaded {} messages.".format(len(database)))
-
-
-if __name__ == "__main__":
-    args = parse_arguments()
-    load_config_and_database(args.verbose)
-
-    if args.help_config:
-        show_config_help()
-        os._exit(0)
-
-    if args.delete:
-        delete_last_message(args.verbose)
-
-    if args.message:
-        add_message(args.message, args.verbose)
-
-    show_banner()
-    show_reminders(args.verbose)
